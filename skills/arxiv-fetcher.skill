@@ -1,0 +1,25 @@
+name: arxiv-fetcher
+version: 1.0
+author: Bedant
+description: Fetches the 20 most recent AI and ML research papers from ArXiv.
+# ArXiv Paper Fetcher Skill
+## What This Skill Does
+Calls the free ArXiv API to retrieve the latest 20 papers published in the Computer Science Artificial Intelligence (cs.AI) and Machine Learning (cs.LG) categories. Returns a clean JSON list of papers.
+## API Endpoint
+URL: https://export.arxiv.org/api/query
+Method: GET
+No API key required.
+## Parameters
+search_query: cat:cs.AI+OR+cat:cs.LG+OR+cat:cs.CL
+max_results: 20
+sortBy: submittedDate
+sortOrder: descending
+## Output Format
+Returns a Python list of dicts. Each dict has these keys:
+- paper_id (string): unique ArXiv ID e.g. '2501.12345'
+- title (string): full paper title
+- abstract (string): full abstract text
+- link (string): URL to the paper on ArXiv
+- authors (string): comma-separated author names
+## Implementation
+See: test_arxiv.py in the project root.

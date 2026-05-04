@@ -1,0 +1,14 @@
+name: github-trending
+version: 1.0
+author: Bedant
+description: Finds the top 10 new AI/LLM GitHub repos created in the last 7 days.
+# GitHub Trending Repos Skill
+## What This Skill Does
+Uses the GitHub Search API to find repositories tagged with 'llm' or 'ai-agent' that were created in the past 7 days, sorted by star count descending.
+## API Endpoint
+URL: https://api.github.com/search/repositories
+Method: GET
+## Output Format
+Returns a list of dicts with keys: name, stars, description, url, language
+## Implementation
+See: test_github.py in the project root.

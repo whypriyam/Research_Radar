@@ -1,0 +1,4 @@
+name: news-scraper
+version: 1.0
+author: Bedant
+description: Fetches the 10 latest AI/ML news headlines from Google News RSS.
